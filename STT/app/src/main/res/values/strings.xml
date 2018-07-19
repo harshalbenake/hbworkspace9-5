@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Speech Recognization</string>
+    <string name="title_activity_voice_recognition">VoiceRecognitionActivity</string>
+    <string name="title_activity_gotev">gotev</string>
+</resources>

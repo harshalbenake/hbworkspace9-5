@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_withpopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Using Google Popup" />
+
+    <Button
+        android:id="@+id/btn_withoutpopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Without Using Google Popup" />
+
+    <Button
+        android:id="@+id/btn_usinggotev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Using Gotev" />
+</LinearLayout>
