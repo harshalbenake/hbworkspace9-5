@@ -26,18 +26,18 @@ public class MainActivity extends Activity {
         mtv_responsencoded = (TextView) findViewById(R.id.tv_responsencoded);
         mtv_responsejson = (TextView) findViewById(R.id.tv_responsejson);
 
-        asyncFamilyProfile();
+        asyncData();
     }
 
     /**
-     * async Family Profile
+     * async Data
      */
-    private void asyncFamilyProfile() {
-        FamilyProfileService familyProfileService = new FamilyProfileService(MainActivity.this);
+    private void asyncData() {
+        DataService dataService = new DataService(MainActivity.this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            familyProfileService.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            dataService.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         } else {
-            familyProfileService.execute();
+            dataService.execute();
         }
     }
 
