@@ -41,7 +41,7 @@ public class OKHTTPService {
         HashMap<String,String> hashMap=new HashMap<String, String>();
         try {
             System.out.println("OkHttp get Request: " + strJson);
-            String strEncodedRequest = EncryptionUtility.encrypt("A1HS8CUR1TY@9812",strJson, "A1HS8CUR1TY@9812");
+            String strEncodedRequest = EncryptionUtility.encrypt("YourKey",strJson, "YourKey");
             System.out.println("OkHttp get EncodedRequest: " + strEncodedRequest);
             RequestBody body = RequestBody.create(JSON, strEncodedRequest);
             Request request = new Request.Builder()
@@ -69,7 +69,7 @@ public class OKHTTPService {
             Response response = okHttpClient.newCall(request).execute();
             String strEncodedResponse = response.body().string();
             System.out.println("OkHttp get EncodedResponse: " + strEncodedResponse);
-            String strResponse = EncryptionUtility.decrypt("A1HS8CUR1TY@9812", strEncodedResponse, "A1HS8CUR1TY@9812");
+            String strResponse = EncryptionUtility.decrypt("YourKey", strEncodedResponse, "YourKey");
             System.out.println("OkHttp get Response: " + strResponse);
             hashMap.put(mStrUrl,strUrl);
             hashMap.put(mStrRequestJson,strJson);
